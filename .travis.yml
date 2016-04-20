@@ -1,4 +1,4 @@
 sudo: required
 install: make dep
 language: c
-script: ./geometry_test
+script: ./configure && make && make test && ./geometry_test
