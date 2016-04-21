@@ -84,9 +84,9 @@ double coord_2d_area_triangle(const coord_2d_t *a, const coord_2d_t *b, const co
       DEBUG(__FILE__, __LINE__, __func__, "'c' must not be NULL");
       return NAN;
   }
-  double t1 = a->x(b->y - c->y);
-  double t2 = b->x(c->y - a->y);
-  double t3 = c->x(a->y - b->y);
+  double t1 = a->x * (b->y - c->y);
+  double t2 = b->x * (c->y - a->y);
+  double t3 = c->x * (a->y - b->y);
   double num = t1 + t2 + t3;
   double ans = num / 2;
 
