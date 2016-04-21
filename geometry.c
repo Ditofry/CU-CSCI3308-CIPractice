@@ -88,6 +88,7 @@ double coord_2d_area_triangle(const coord_2d_t *a, const coord_2d_t *b, const co
   double t2 = b->x(c->y - a->y);
   double t3 = c->x(a->y - b->y);
   double num = t1 + t2 + t3;
+  double ans = num / 2;
 
-  return num / 2;
+  return fabs(ans);
 }
