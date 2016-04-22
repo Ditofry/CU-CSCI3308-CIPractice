@@ -182,13 +182,13 @@ Suite* coord_2d_suite(void)
     tcase_add_test(tc_2d_midpoint, test_2d_midpoint);
 
     TCase* tc_test_area = tcase_create("test_area");
-    tcase_add_test(tc_test_area, test_test_area);
+    tcase_add_test(tc_test_area, test_area);
 
     /* Add Cases to Suite */
     suite_add_tcase(s, tc_2d_eq);
     suite_add_tcase(s, tc_2d_dist);
     suite_add_tcase(s, tc_2d_midpoint);
-    suite_add_tcase(s, test_area);
+    suite_add_tcase(s, tc_test_area);
 
     /* Return Suite */
     return s;
